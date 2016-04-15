@@ -152,22 +152,4 @@ namespace contacts
 
 }
 
-void usage()
-{
-   using namespace contacts::vcf;
-
-   declaration decl("TEL;PREF;CELL;VOICE;ENCODING=8BIT:08072167082");
-   print_w_tab_ln(decl.keyword());
-   print_w_tab_ln(decl.attribute_string());
-   print("ENCODING=", decl.attribute().value("ENCODING"));DL
-
-   decl.set_declaration("FN;CHARSET=UTF-8;ENCODING=8BIT:Salafi::m");
-   print_w_tab_ln(decl.keyword(), decl.value(), decl.is_valid_keyword());
-   print_w_tab_ln(decl.attribute_string());
-   decl.attribute();
-
-   //decl.set_declaration("FNA;CHARSET=UTF-8;ENCODING=8BIT:Salafi::m"); /*Invalid in strict mode*/
-   //print_w_tab_ln(decl.keyword());
-}
-
 #endif
